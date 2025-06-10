@@ -11,7 +11,7 @@ public:
     bool flag;           // 0表示不可访问, 1表示可访问
 
     Worker();
-    Worker(string name, double basicSalary);
+    Worker(const string& name, double basicSalary);
     virtual ~Worker();
 
     double getBasicSalary();

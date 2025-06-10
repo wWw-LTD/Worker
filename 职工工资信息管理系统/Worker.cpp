@@ -8,7 +8,7 @@ Worker::Worker()
     this->basicSalary = 0;
 }
 
-Worker::Worker(string name, double basicSalary)
+Worker::Worker(const string& name, double basicSalary)
 {
     this->name = name;
     this->basicSalary = basicSalary;

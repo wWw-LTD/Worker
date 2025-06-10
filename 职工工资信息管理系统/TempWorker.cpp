@@ -21,7 +21,7 @@ TempWorker::TempWorker()
 }
 
 /* 注意: 子类的有参构造函数中, 一定要给父类的属性赋值 */
-TempWorker::TempWorker(string name, double basicSalary, double bonus) : Worker(name, basicSalary)
+TempWorker::TempWorker(const string& name, double basicSalary, double bonus) : Worker(name, basicSalary)
 {
     this->bonus = bonus;
     this->realSalary = getBasicSalary() + bonus;

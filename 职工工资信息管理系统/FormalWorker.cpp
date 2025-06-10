@@ -21,7 +21,7 @@ FormalWorker::FormalWorker()
 }
 
 /* 注意: 子类的有参构造函数中, 一定要给父类的属性赋值 */
-FormalWorker::FormalWorker(string name, double basicSalary, double tax) : Worker(name, basicSalary)
+FormalWorker::FormalWorker(const string& name, double basicSalary, double tax) : Worker(name, basicSalary)
 {
     this->tax = tax;
     this->realSalary = getBasicSalary() - tax;
@@ -35,7 +35,7 @@ FormalWorker::~FormalWorker()
     totalSalary -= realSalary;
 }
 
-double FormalWorker::getRealSalary()
+double FormalWorker::getRealSalary() const
 {
     return realSalary;
 }
